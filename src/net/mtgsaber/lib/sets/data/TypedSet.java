@@ -13,13 +13,17 @@ public class TypedSet<T> {
 
     public TypedSet(Class<T> type, Set<T> val) {
         TYPE = type;
-        VAL = val;
+        VAL = new HashSet<>(val);
     }
 
     public Class<T> type() {
         return TYPE;
     }
 
+    /**
+     *
+     * @return A copy of VAL.
+     */
     public Set<T> set() {
         return new HashSet<>(VAL);
     }

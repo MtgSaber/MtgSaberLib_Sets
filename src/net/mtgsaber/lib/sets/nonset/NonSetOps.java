@@ -7,6 +7,10 @@ public class NonSetOps {
      * exhaustive approach to finding the common elements of two arrays.
      * Duplicates are treated as "unique" elements, such that each instance of a duplicate
      * value is counted separately.
+     * Time Complexity, m = smaller array length, n = larger array length:
+     *  - Sigma(mn)
+     *  - Theta(mn)
+     *  - Omega(m)
      * @param l1 is to be an array in non-decreasing order
      * @param l2 is to be an array in non-decreasing order
      * @param comparator to compare l1 against l2
@@ -66,4 +70,6 @@ public class NonSetOps {
         // convert back to array
         return retTemp.toArray(Arrays.copyOf(b, 0));
     }
+
+
 }
